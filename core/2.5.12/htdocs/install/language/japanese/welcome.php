@@ -19,7 +19,7 @@ $content = '
 <h3>必要環境</h3>
 <ul>
     <li>WWWサーバー（<a href="https://www.apache.org/" rel="external">Apache</a>、<a href="https://www.nginx.com/" rel="external">NGINX</a>、IISなど）</li>
-    <li><a href="https://www.php.net/" rel="external">PHP</a> 5.6.0 以上（推奨：7.3以上）</li>
+    <li><a href="https://www.php.net/" rel="external">PHP</a> 7.4 以上（推奨：7.3以上）</li>
     <li><a href="https://www.mysql.com/" rel="external">MySQL</a> 5.5 以上（推奨：5.7以上）</li>
 </ul>
 <h3>インストール前に</h3>
