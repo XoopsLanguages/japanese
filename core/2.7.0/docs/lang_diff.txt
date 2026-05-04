@@ -1,0 +1,662 @@
+言語の違い
+=====================
+
+以下は、バージョン間の言語の違いです。
+
+================================
+2025/03/30: バージョン 2.7.0-Betas (以前は 2.5.12-Betas としてリリースされました)
+================================
+/htdocs/modules/system/ language/english/admin.php
+- define('_AM_SYSTEM_MENUS', 'Menus'); を追加しました。
+- define('_AM_SYSTEM_MENUS_DESC', 'サイト ナビゲーション メニューの管理'); を追加しました。
+
+/htdocs/modules/system/ language/english/modinfo.php
+- define('_MI_SYSTEM_MENUS_ACTIVE', 'メニュー システムを有効にする'); を追加しました。
+- define('_MI_SYSTEM_MENUS_ACTIVE_DESC', 'サイト ナビゲーション用の組み込みメニュー管理システムを有効にする'); を追加しました。
+
+/htdocs/modules/system/ language/english/admin/menus.php (新しいファイル)
+- 追加define('_AM_SYSTEM_MENUS_NAV_MAIN', 'メニューマネージャー');
+- 追加define('_AM_SYSTEM_MENUS_NAV_BACK', 'メニューリストに戻る');
+- 追加define('_AM_SYSTEM_MENUS_NAV_CATEGORY', 'カテゴリービュー');
+- 追加define('_AM_SYSTEM_MENUS_NAV_TIPS', '<strong>ヒント:</strong><ul>...');
+- define('_AM_SYSTEM_MENUS_ACTIVE', 'Active'); を追加しました。
+- 追加define('_AM_SYSTEM_MENUS_ACTIVE_YES', 'Enabled');
+- 追加define('_AM_SYSTEM_MENUS_ACTIVE_NO', 'Disabled');
+- 追加define('_AM_SYSTEM_MENUS_SAVED', '正常に保存されました');
+- 追加define('_AM_SYSTEM_MENUS_DELETED', '正常に削除されました');
+- 追加define('_AM_SYSTEM_MENUS_ORDER_SAVED', '注文を保存しました');
+- 追加define('_AM_SYSTEM_MENUS_LISTCAT', 'リストカテゴリ');
+- 追加define('_AM_SYSTEM_MENUS_LISTITEM', 'リスト項目');
+- 定義を追加しました('_AM_SYSTEM_MENUS_ADDCAT', 'カテゴリの追加');
+- 追加define('_AM_SYSTEM_MENUS_EDITCAT', 'カテゴリの編集');
+- 追加define('_AM_SYSTEM_MENUS_DELCAT', 'カテゴリの削除');
+- 追加define('_AM_SYSTEM_MENUS_CATTITLE', 'カテゴリタイトル');
+- 追加define('_AM_SYSTEM_MENUS_CATTITLE_DESC', '言語定数名(例：MENUS_HOME)をここで使用できるため、ラベルは翻訳可能です。');
+- define('_AM_SYSTEM_MENUS_CATPREFIX', 'Prefix (HTML)'); を追加しました。
+- define('_AM_SYSTEM_MENUS_CATPREFIX_DESC', 'Font Awesome アイコンなど、カテゴリ タイトルの前に表示されるオプションのマークアップ。'); を追加しました。
+- 追加define('_AM_SYSTEM_MENUS_CATSUFFIX', 'サフィックス(HTML)');
+- 追加define('_AM_SYSTEM_MENUS_CATSUFFIX_DESC', 'カテゴリタイトルの後に表示されるオプションのマークアップ。');
+- 追加define('_AM_SYSTEM_MENUS_CATURL', 'URL');
+- 追加define('_AM_SYSTEM_MENUS_CATURL_DESC', '「index.php」または絶対URLなどのカテゴリ自体へのリンク。');
+- 追加define('_AM_SYSTEM_MENUS_CATTARGET', 'リンクターゲット');
+- 追加define('_AM_SYSTEM_MENUS_CATPOSITION', 'Position');
+- 追加define('_AM_SYSTEM_MENUS_DELCAT_CONFIRM', 'カテゴリ「%s」とそのすべての項目を削除してもよろしいですか?');
+- 追加define('_AM_SYSTEM_MENUS_ADDITEM', '項目の追加');
+- 追加define('_AM_SYSTEM_MENUS_EDITITEM', '項目の編集');
+- 追加define('_AM_SYSTEM_MENUS_DELITEM', '項目の削除');
+- 追加define('_AM_SYSTEM_MENUS_ITEMTITLE', '項目タイトル');
+- 追加define('_AM_SYSTEM_MENUS_ITEMTITLE_DESC', 'ここで言語定数名を使用できるため、ラベルは翻訳可能です。');
+- 追加define('_AM_SYSTEM_MENUS_ITEMPREFIX', 'Prefix (HTML)');
+- 追加define('_AM_SYSTEM_MENUS_ITEMPREFIX_DESC', 'Font Awesomeアイコンなど、項目タイトルの前に表示されるオプションのマークアップ。');
+- define('_AM_SYSTEM_MENUS_ITEMSUFFIX', 'Suffix (HTML)'); を追加しました。
+- 追加define('_AM_SYSTEM_MENUS_ITEMSUFFIX_DESC', '項目タイトルの後に表示されるオプションのマークアップ。<{xoInboxCount}>プレースホルダーをサポートします。');
+- 追加define('_AM_SYSTEM_MENUS_ITEMURL', 'URL');
+- 追加define('_AM_SYSTEM_MENUS_ITEMTARGET', 'リンクターゲット');
+- 追加define('_AM_SYSTEM_MENUS_ITEMPOSITION', 'Position');
+- define('_AM_SYSTEM_MENUS_ITEMPARENT', '親項目'); を追加しました。
+- 定義を追加しました('_AM_SYSTEM_MENUS_ITEMCATEGORY', 'カテゴリ');
+- 追加define('_AM_SYSTEM_MENUS_DELITEM_CONFIRM', 'アイテム「%s」とそのサブアイテムを削除してもよろしいですか?');
+- 追加define('_AM_SYSTEM_MENUS_TARGET_SELF', '同じウィンドウ');
+- 追加define('_AM_SYSTEM_MENUS_TARGET_BLANK', '新しいウィンドウ');
+- 追加define('_AM_SYSTEM_MENUS_PERMISSION_VIEW_CATEGORY', 'このカテゴリを表示できるグループ');
+- 追加define('_AM_SYSTEM_MENUS_PERMISSION_VIEW_CATEGORY_DESC', 'ユーザーは、アイテムが表示される前にカテゴリへのアクセス権を持っている必要があります。');
+- define('_AM_SYSTEM_MENUS_PERMISSION_VIEW_ITEM', 'この項目を表示できるグループ'); を追加しました。
+- 追加define('_AM_SYSTEM_MENUS_PERMISSION_VIEW_ITEM_DESC', '項目の権限は親カテゴリの権限の後にチェックされます。');
+- 定義を追加しました('_AM_SYSTEM_MENUS_ERROR_CATNOTFOUND', 'カテゴリが見つかりません');
+- 追加define('_AM_SYSTEM_MENUS_ERROR_CATPROTECTED', '保護されたカテゴリは削除できません');
+- 追加define('_AM_SYSTEM_MENUS_ERROR_CATINACTIVE', 'アクティブ化できません: カテゴリは非アクティブです');
+- 定義を追加しました('_AM_SYSTEM_MENUS_ERROR_ITEMNOTFOUND', '項目が見つかりません');
+- 追加define('_AM_SYSTEM_MENUS_ERROR_ITEMPROTECTED', '保護された項目は削除できません');
+- 追加define('_AM_SYSTEM_MENUS_ERROR_ITEMPARENT', '無効な親項目が選択されました');
+- 追加define('_AM_SYSTEM_MENUS_ERROR_ITEMCYCLE', '親を設定できません: 循環参照が作成されてしまいます');
+- 追加define('_AM_SYSTEM_MENUS_ERROR_ITEMDEPTH', '最大ネスト深さ(3レベル)を超えました');
+- 追加define('_AM_SYSTEM_MENUS_ERROR_PARENTINACTIVE', 'アクティブ化できません: 親項目は非アクティブです');
+- 追加define('_AM_SYSTEM_MENUS_ERROR_NOITEMS', 'このカテゴリにはサブメニュー項目がありません。');
+- 追加define('_AM_SYSTEM_MENUS_ERROR_ITEMEDIT', '編集する前にこの項目を有効にしてください');
+- 追加define('_AM_SYSTEM_MENUS_ERROR_ITEMDISABLE', '削除する前にこの項目を有効にしてください');
+- define('MENUS_HOME', 'Home'); を追加しました。
+- define('MENUS_ADMIN', 'Administration'); を追加しました。
+- define('MENUS_ACCOUNT', 'Account'); を追加しました。
+- 定義を追加しました('MENUS_ACCOUNT_EDIT', 'アカウントの編集');
+- define('MENUS_ACCOUNT_LOGIN', 'Login'); を追加しました。
+- 定義を追加しました('MENUS_ACCOUNT_LOGOUT', 'ログアウト');
+- define('MENUS_ACCOUNT_REGISTER', 'Sign Up'); を追加しました。
+- define('MENUS_ACCOUNT_MESSAGES', 'Messages'); を追加しました。
+- define('MENUS_ACCOUNT_NOTIFICATIONS', 'Notifications'); を追加しました。
+- 追加define('MENUS_ACCOUNT_TOOLBAR', 'ツールバー');
+
+/htdocs/modules/system/constants.php
+- 定義を追加しました('XOOPS_SYSTEM_MENUS', 19);
+
+/htdocs/modules/system/ language/english/blocks.php
+-added define('_MB_SYSTEM_WAITING_CONTENT_DEPRECATED', "ブロック「待機コンテンツ」は XOOPS 2.5.11 以降非推奨になっています。待機モジュールを使用してください。");
+
+/htdocs/install/ language/english/welcome.php
+- 更新された PHP および MySQL バージョン
+
+/htdocs/modules/pm/言語/english/main.php
+- 更新されたdefine('_PM_EMAIL_DESC', '%s様、これは' のアカウントから転送されたメッセージです。 $GLOBALS['xoopsConfig']['sitename']);
+- 更新されたdefine('_PM_EMAIL_DESC', '%s様、これは' のアカウントから転送されたメッセージです。$GLOBALS['xoopsConfig']['sitename']);
+
+/htdocs/言語/english/user.php
+- 定義を更新しました('_US_SORRYNOTFOUND', '申し訳ありません、対応するユーザー情報が見つかりませんでした。');
+- 更新されたdefine('_US_SORRYNOTFOUND', 'アカウントが提供された情報と一致する場合、リクエストを処理します。すぐにメールが届かない場合は、スパムフォルダーを確認するか、サイト管理者にお問い合わせください。');
+
+- 定義を更新しました('_US_PWDMAILED', '%s のパスワードがメールされました。');
+- 更新されたdefine('_US_PWDMAILED', 'このメールのアカウントが存在する場合は、パスワードのリセット手順が送信されます。必要に応じてスパムフォルダーを確認するか、サイト管理者に問い合わせてください。');
+
+- 定義を更新しました('_US_CONFMAIL', '%s の確認メールを送信しました。');
+- 更新されたdefine('_US_CONFMAIL', 'このメールのアカウントが存在する場合は、パスワードのリセット手順が送信されます。必要に応じてスパムフォルダーを確認するか、サイト管理者に問い合わせてください。');
+
+/htdocs/class/xoopseditor/tinymce5/ language/english.php
+- _XOOPS_EDITOR_TINYMCE_LANGUAGE5 の名前を _XOOPS_EDITOR_TINYMCE5_LANGUAGE に変更しました
+
+/htdocs/modules/system/主題/移行/言語/english/admin.php
+- _OXYGEN_Server_API の名前を _OXYGEN_SERVER_API に変更しました
+
+/htdocs/modules/system/ language/english/admin/preferences.php。
+- 追加define('_MD_AM_SENDMAIL_NOT_FOUND', 'Sendmailバイナリが見つかりません。サーバー設定を確認してください。');
+- 追加define('_MD_AM_SENDMAIL_HELP_MISSING_BIN', '有効なsendmail互換バイナリが検出されませんでした。MTA (例：Postfix、msmtp)をインストールするか、環境設定でSMTPに切り替えてください。');
+
+/htdocs/modules/system/ language/english/admin/users.php
+- 定義を追加しました('_AM_SYSTEM_USERS_UNKNOWN_GROUP', '不明なグループ');
+
+/htdocs/modules/system/ language/english/comment.php
+- 定義を追加しました('_CM_ADDCOMMENT', 'コメントの追加');
+
+
+/htdocs/install/ language/english/install.php
+- 定義を追加しました('_WEBSITE_NAME', 'XOOPS サイト');
+- define('_WEBSITE_SLOGAN', 'そのまま使ってください!'); を追加しました。
+- define('_WEBSITE_META_KEYWORDS', 'xoops、Web アプリケーション フレームワーク、CMS、コンテンツ管理システム'); を追加しました。
+- 追加define('_WEBSITE_FOOTER', "Powered by XOOPS © 2001-{X_YEAR} <a href='https://xoops.org' rel='external' title='XOOPS プロジェクト'>XOOPS プロジェクト</a>");
+- 定義を追加しました('_WEBSITE_COPYRIGHT', 'Copyright © 2001-{X_YEAR}');
+- define('_WEBSITE_DESCRIPTION', 'XOOPS は、PHP で書かれた動的なオブジェクト指向ベースのオープン ソース ポータル スクリプトです。'); を追加しました。
+- 定義を追加しました('_WEBSITE_CENSOR_REPLACE', 'OOPS');
+
+
+================================
+2023/10/01: バージョン 2.5.11-最終版
+================================
+/言語/english/uploader.php
+-define('_ER_UP_MODE_NOT_CHANGED', 'ファイルはアップロードされましたが、モードを変更できませんでした'); を追加しました。
+
+================================
+2023/10/01: バージョン 2.5.11-RC3
+================================
+
+変更されたファイル:
+upgrade/言語/english/upgrade.php
+アップグレード/言語/english/smarty3.php
+
+htdocs/class/xoopseditor/tinymce/ language/english.php
+- 定義を追加しました('_FAILGETIMG', 'イメージ %s の取得に失敗しました');
+
+/htdocs/modules/system/ language/english/modinfo.php
+- 追加define('_MI_DEFAULT_NOTIFICATION_METHOD_DISABLE', '一時的に無効にする');
+- 定義を追加しました('_MI_DEFAULT_NOTIFICATION_METHOD_EMAIL', '電子メール');
+- 追加define('_MI_DEFAULT_NOTIFICATION_METHOD_PM', 'プライベートメッセージ');
+
+/htdocs/modules/system/ language/english/admin/preferences.php
+- 追加define('_MD_AM_DEFAULT_NOTIFICATION_METHOD', 'デフォルトの通知方法');
+- 追加define('_MD_AM_DEFAULT_NOTIFICATION_METHOD_DESC', '新規ユーザーがフォーラムなどからの通知を購読する場合。');
+- 定義を追加しました('_MD_AM_MODULEPREF',
+
+
+================================
+2023/03/19: バージョン 2.5.11-RC1
+================================
+
+変更されたファイル:
+htdocs/言語/english/global.php
+- 追加define('_DB_QUERY_ERROR', 'クエリ失敗! SQL: %s - エラー: ');
+- define('_PRINT', 'Print'); を追加しました。
+- 定義('_PDF', 'PDF'); を追加しました。
+- 定義を追加しました('_OFF', 'Off');
+
+================================
+2021/09/02: バージョン 2.5.11-ベータ版
+================================
+
+変更されたファイル:
+htdocs/言語/english/admin.php
+- 追加define('_AD_WARNING_NO_XML', 'この関数にはPHP XML拡張機能が必要です。');
+
+htdocs/xoops_lib/modules/プロテクター/言語/english/admin.php
+- 定義を追加しました('_AM_ADMINSTATS_LAST_MONTH', '先月');
+- 定義を追加しました('_AM_ADMINSTATS_LAST_WEEK', '先週');
+- 定義を追加しました('_AM_ADMINSTATS_LAST_DAY', '最終日');
+- 定義を追加しました('_AM_ADMINSTATS_LAST_HOUR', '最後の時間');
+
+htdocs/言語/english/global.php
+- define('_PRINT', 'Print'); を追加しました。
+- 定義('_PDF', 'PDF'); を追加しました。
+- 定義を追加しました('_OFF', 'Off');
+- 定義を変更しました('_ON', 'On'); //「オン」から
+
+htdocs/言語/english/global.php
+- 定義を変更しました('_SIZE', 'Size'); // フォントサイズ
+- 定義を変更しました('_FONT', 'Font'); // フォントファミリー
+- 定義を変更しました('_COLOR', 'Color'); // フォントの色
+
+htdocs/install/ language/english/install.php
+- 追加define('ERR_COPY_CONFIG_FILE', '構成ファイル %s');
+
+htdocs/install/ language/english/welcome.php
+- 推奨される PHP および MySQL バージョンを変更し、リンクを「https:」に変更しました。
+
+htdocs/modules/system/ language/english/admin/preferences.php
+- 変更されたdefine('_MD_AM_SMTPHOSTDESC', '単一のホスト名またはセミコロンで区切られた複数のホスト名のいずれか。<br>次の形式を使用して、ホストごとに異なるポートを指定することもできます: [hostname:port] (例: "smtp1.example.com:25;smtp2.example.com")。<br>また、次のように暗号化タイプを指定することもできます。 (例: "tls://smtp1.example.com:587;ssl://smtp2.example.com:465")。<br>ホストは順番に試行されます。');
+
+htdocs/modules/system/ language/english/help/blocksadmin.html
+
+htdocs/modules/system/ language/english/admin/modulesadmin.php
+- 定義を変更しました('_AM_SYSTEM_MODULES_ADMIN', 'XOOPS モジュール管理');
+
+新しいファイル:
+htdocs/主題/xswatch4/言語/english/main.php
+xswatch/ language/english/main.php のコピーとして開始し、次のようにします。
+- 追加define('THEME_TOOLBAR_​​DEBUGMODE', 'デバッグモード');
+- 追加define('THEME_TOOLBAR_​​THIS_MODULE', 'このモジュール');
+- 追加define('THEME_PERMISSIONS_LEGEND', '権限と凡例');
+- 定義を追加しました('THEME_INBOX_ALERT', 'PM アラート');
+- 追加define('THEME_INBOX_LINK', '受信箱を表示するにはここをクリックしてください!');
+- 追加define('THEME_EVENT_DOWNLOADS', 'イベントダウンロード');
+- 追加define('THEME_FILE_NAME', 'File');
+- 定義を追加しました('THEME_FILE_SIZE', 'Size');
+- define('THEME_CONTROL_NEXT', 'Next'); を追加しました。
+- 追加define('THEME_CONTROL_PREVIOUS', 'Previous');
+
+htdocs/言語/english/user.php
+- 追加define('_US_DESCRIPTIONMIN', '必要な最小長: %s');
+- 定義を追加しました('_US_DESCRIPTIONMAX', '最大長: %s');
+
+htdocs/modules/system/ language/english/admin/mailusers.php
+- 追加define('_AM_SYSTEM_MAILUSERS_MAILTAGS5', '{X_NAME}は空の場合はnameまたはunameを出力します');
+
+htdocs/modules/system/ language/english/admin/images.php
+- 追加define("_AM_SYSTEM_IMAGES_SCATDELNG","このカテゴリは削除できません");
+
+htdocs/modules/system/ language/english/admin/modulesadmin.php
+- 追加define('_AM_SYSTEM_MODULES_INSTALL_THISMODULE', 'このモジュール管理者');
+
+削除されたファイル:
+htdocs/modules/system/ language/english/admin/users.php
+- 削除されたdefine('_AM_SYSTEM_USERS_MODIFYUSER', 'ユーザーの変更');
+- 削除されたdefine('_AM_SYSTEM_USERS_DELUSER', 'ユーザーの削除');
+- 削除されたdefine('_AM_SYSTEM_USERS_GO', 'Go!');
+
+================================
+2019/04/29: バージョン 2.5.10 最終版
+================================
+追加/削除された定義:
+htdocs/xoops_lib/modules/プロテクター/言語/english/admin.php
+- 追加define('_AM_LABEL_BAN_BY_IP', 'チェックされたレコードのIPを禁止:');
+- 追加define('_AM_BUTTON_BAN_BY_IP', 'IP禁止!');
+- 定義を追加しました('_AM_JS_BANCONFIRM', 'IP 禁止は OK?');
+- 定義を追加しました('_AM_MSG_BANNEDIP', 'IP は禁止されています');
+- define('_AM_ADMINSTATS_TITLE', 'Protector Log Summary'); を追加しました。
+
+htdocs/xoops_lib/modules/プロテクター/言語/english/modinfo.php
+- 定義を追加しました($constpref . '_ADMINSTATS', '概要');
+- define($constpref . '_BANIP_TIME0DSC', '自動 IP 禁止の一時停止時間 (秒単位)'); を追加しました。
+
+htdocs/言語/english/uploader.php
+- 追加define('_ER_UP_INDEXNOTSET', '複数のファイルを取得しようとしました。インデックスを設定する必要があります。');
+
+htdocs/言語/english/admin.php
+- define('_AD_WARNING_OLD_PHP', '警告: PHP の新しいバージョンへのアップグレードを検討してください。バージョン %s 以降が推奨されており、将来の XOOPS バージョンでは必須になります。'); を追加しました。
+
+定義が変更されました
+htdocs/xoops_lib/modules/プロテクター/言語/english/admin.php
+-define('_AM_TXT_HOWTOCHANGEDB',"プレフィックスを変更したい場合は、<br>%s/data/secure.php を手動で編集してください。<br><br>define('XOOPS_DB_PREFIX', '<b>%s</b>');");
+
+htdocs/install/english/welcome.php
+- 推奨される PHP バージョンを変更し、SELinux に関する特記事項セクションを追加しました
+
+/home/richard/sites/x258i/htdocs/Frameworks/moduleclasses/moduleadmin/ language/english/main.php
+- '_AM_MODULEADMIN_ADMIN_FOOTER' の定義で、XOOPS リンクを 'https://xoops.org' に変更しました
+
+新しいファイル:
+該当なし
+
+===============================
+2017/08/01: バージョン 2.5.9 最終版
+===============================
+追加/削除された定義
+
+htdocs/Frameworks/moduleclasses/moduleadmin/言語/english/main.php
+- 追加define('_AM_MODULEADMIN_ABOUT_AMOUNT', 'Amount');
+- 定義を追加しました('_AM_MODULEADMIN_ABOUT_AMOUNT_TTL', '米ドルの金額を入力してください。例: $25.00');
+- 定義を追加しました('_AM_MODULEADMIN_ABOUT_AMOUNT_CURRENCY', 'USD');
+- 定義を追加しました('_AM_MODULEADMIN_ABOUT_AMOUNT_SUGGESTED', '25.00');
+- 追加define('_AM_MODULEADMIN_ABOUT_AMOUNT_PATTERN', '\\$?[0-9]+(,[0-9]{3})*(\\.[0-9]{0,2})?$');
+- 追加define('_AM_MODULEADMIN_ABOUT_DONATE_IMG_ALT', 'PayPalまたはオンラインの主要なクレジットカードを使用して寄付してください!');
+
+htdocs/install/ language/english/install.php
+*注意* インストーラーは大幅に変更されたため、このファイルを注意深く確認する必要があります
+- define("CURL_HTTP", "クライアント URL ライブラリ (cURL)"); を追加しました。
+- 追加define('XOOPS_COOKIE_DOMAIN_LABEL', 'WebサイトのCookieドメイン');
+- 追加define('XOOPS_COOKIE_DOMAIN_HELP', 'Cookieを設定するドメイン。空白、URLからの完全なホスト(www.example.com)、またはサブドメイン間で共有するサブドメインなしの登録ドメイン(example.com)(www.example.comおよびblog.example.com.)');
+- define('INTL_SUPPORT', '国際化関数'); を追加しました。
+- 追加define('XOOPS_SOURCE_CODE', "XOOPS on GitHub");
+- 定義を追加しました('XOOPS_INSTALLING', 'インストール中');
+- 定義を追加しました('XOOPS_ERROR_ENCOUNTERED', 'エラー');
+- 追加define('XOOPS_ERROR_SEE_BELOW', 'メッセージについては以下を参照してください。');
+- 追加define('MODULES_AVAILABLE', '利用可能なモジュール');
+- 追加define('INSTALL_THIS_MODULE', 'Add %s');
+
+htdocs/install/ language/english/finish.php
+- モジュールとテーマに関する情報については、新規ユーザーに xoops.org を参照するように変更します。
+
+htdocs/言語/english/global.php
+- 追加define('_UPLOAD', 'Upload');
+- 追加define('_SELECTFILES', 'ファイルの選択');
+- 追加define('_DROPFILESHERE', 'ここにファイルをドロップ');
+- define('_RETRY', 'Retry'); を追加しました。
+- define('_OK', 'Ok'); を追加しました。
+- 追加define('_FORMATPROGRESS', '{percent}% of {total_size}');
+- 追加define('_FAILUPLOAD', 'アップロード失敗!');
+- 追加define('_WAITINGFORRESPONSE', '処理中...');
+- define('_PAUSED', 'Paused'); を追加しました。
+- 追加define('_PROCESSINGDROPPEDFILES', 'ドロップされたファイルを処理中...');
+- 追加define('_TYPEERROR', '{file}には無効な拡張子があります。有効な拡張子: {extensions}!');
+- 追加define('_SIZEERROR', '{file}が大きすぎます。最大ファイルサイズは{sizeLimit}です!');
+- 追加define('_MINSIZEERROR', '{file}が小さすぎます、最小ファイルサイズは{minSizeLimit}です!');
+- 定義を追加しました('_EMPTYERROR', '{file} は空です。それを使用せずにファイルを再度選択してください!');
+- 追加define('_NOFILESERROR', 'アップロードするファイルがありません!');
+- define('_TOOMANYITEMSERROR', 'アップロードされるアイテム ({netItems}) が多すぎます。アイテムの制限は {itemLimit} です!'); を追加しました。
+- 定義を追加しました('_MAXHEIGHTIMAGEERROR', '画像が高すぎます!');
+- 定義を追加しました('_MAXWIDTHIMAGEERROR', '画像が広すぎます!');
+- 定義を追加しました('_MINHEIGHTIMAGEERROR', '画像の高さが足りません!');
+- 追加define('_MINWIDTHIMAGEERROR', '画像の幅が足りません!');
+- 追加define('_RETRYFAILTOOMANYITEMS', '再試行失敗 - ファイル制限に達しました!');
+- 追加define('_ONLEAVE', 'ファイルはアップロード中です。今すぐ離れるとアップロードはキャンセルされます!');
+- 追加define('_UNSUPPORTEDBROWSERIOS8SAFARI', '回復不可能なエラー - iOS8 Safariには重大なバグがあるため、このブラウザではいかなる種類のファイルのアップロードも許可されていません。Appleがこれらの問題を修正するまでiOS8 Chromeを使用してください!');
+
+htdocs/言語/english/uploader.php
+- 追加define('_ER_UP_INISIZE', 'アップロードされたファイルはphp.iniのupload_max_filesizeディレクティブを超えています');
+- 追加define('_ER_UP_FORMSIZE', 'アップロードされたファイルはHTMLフォームで指定されたMAX_FILE_SIZEディレクティブを超えています');
+- 追加define('_ER_UP_PARTIAL', 'アップロードされたファイルは部分的にのみアップロードされました');
+- 追加define('_ER_UP_NOFILE', 'ファイルはアップロードされませんでした');
+- 追加define('_ER_UP_NOTMPDIR', '一時フォルダーがありません');
+- 追加define('_ER_UP_CANTWRITE', 'ファイルをディスクに書き込めませんでした');
+- 追加define('_ER_UP_EXTENSION', '拡張機能によりファイルのアップロードが停止されました。View phpinfo()');
+- 定義を追加しました('_ER_UP_UNKNOWN', '不明なアップロード エラー');
+
+htdocs/言語/english/user.php
+- 削除されましたdefine('_US_USECOOKIE', 'ユーザー名をCookieに1年間保存します');
+
+htdocs/modules/profile/ language/english/admin.php
+- 追加define('_PROFILE_AM_CANNOTDEACTIVATEWEBMASTERS', 'ウェブマスターアカウントを無効化することはできません');
+
+htdocs/modules/system/ language/english/admin/comments.php
+- 定義を追加しました('_MP_DELETECOUNT', 'グループ内のメンバーの数が大きすぎます ( > 4,000) ');
+
+htdocs/modules/system/ language/english/admin/userrank.php
+- 追加define('_AM_SYSTEM_USERRANK_ERROR', 'Errors');
+
+upgrade/言語/english/upgrade.php
+-define('_LANGUAGE', 'Language'); を追加しました。
+- define('_SUPPORT', 'Support'); を追加しました。
+- 定義を追加しました('_XOOPS_SOURCE_CODE', 'GitHub 上の XOOPS');
+- 追加define('_PATCH_COUNT', 'パッチセット');
+- 追加define('_USERNAME_PLACEHOLDER', 'あなたのユーザー名');
+- 追加define('_PASSWORD_PLACEHOLDER', 'あなたのパスワード');
+- 定義を追加しました('_CONTINUE', 'Continue');
+- 定義を追加しました('XOOPS_ERROR_ENCOUNTERED', 'エラー');
+- 追加define('XOOPS_ERROR_SEE_BELOW', 'メッセージについては以下を参照してください。');
+
+htdocs/主題/xbootstrap/言語/english/main.php
+- define("THEME_USER_WELCOME", "Welcome"); を追加しました。
+
+新しいファイル:
+- htdocs/modules/system/主題/transition/言語/english/admin.php
+- htdocs/modules/system/主題/transition/言語/english/localsupport.php
+
+- アップグレード/言語/英語/
+*注意* アップグレード コードが大幅に変更されたため、これらのファイルを注意深く確認する必要があります
+- パッチ言語ごとのすべてのファイルをパッチ ディレクトリから upgrade/ language/* に移動しました
+  つまり、upgrade/upd-2.0.18-to-2.3.0/ language/english.php になりました。
+  upgrade/言語/english/upd-2.0.18-to-2.3.0.php
+
+- upgrade/ language/english/support.php (htdocs/install/ language/english/support.php と同じ)
+- アップグレード/言語/english/welcome.php
+
+===============================
+2016/05/27: バージョン 2.5.8
+===============================
+追加/削除された定義
+
+/インストール/言語/english/install.php
+/モジュール/システム/言語/english/admin/modulesadmin.php
+- define('_AM_SYSTEM_MODULES_INSTALL_MORE',"さらにモジュールをインストールする"); を追加しました。
+
+/モジュール/システム/言語/english/admin/users.php
+define('_AM_SYSTEM_USERS_ACTIVATE', 'ユーザーをアクティブ化');
+
+/モジュール/システム/言語/english/blocks.php
+define('_MB_SYSTEM_BLOCK_HEIGHT',"ブロック高さ (行数)");
+
+インストール/言語/english/install.php
+define('CHMOD_CHGRP_REPEAT', '再試行');
+define('CHMOD_CHGRP_IGNORE', 'とにかく使用');
+define('CHMOD_CHGRP_ERROR', 'インストーラーは構成ファイル %1$s を書き込めない可能性があります。<p>PHP はユーザー %2$s およびグループ %3$s の下にファイルを書き込んでいます。<p>悲惨な状況です。
+
+定義が変更されました
+xoops_lib/modules/プロテクター/言語/english/modinfo.php
+定義($constpref . '_HIJACK_TOPBITDSC', ...
+
+/モジュール/システム/テーマ/デフォルト/言語/english/admin.php
+define('_OXYGEN_CODESVN', 'コードリポジトリ');
+
+インストール/言語/english/install.php
+define('SAVED_MAINFILE', '設定を保存しました');
+define('ERR_NEED_WRITE_ACCESS', 'サーバーには、次のファイルとフォルダーへの書き込みアクセス権が与えられている必要があります<br />(つまり、UNIX/LINUX サーバー上の<em>chmod 775 directory_name</em>)<br />これらが利用できない場合、または正しく作成されていない場合は、手動で作成して適切な権限を設定してください。');
+define('ERR_COPY_MAINFILE', '配布ファイルを %s にコピーできませんでした');
+define('ERR_WRITE_MAINFILE', '%s に書き込めませんでした。ファイルのアクセス許可を確認して、もう一度お試しください。');
+define('ERR_READ_MAINFILE', '読み取りのために%sを開けませんでした');
+
+/モジュール/システム/テーマ/zetadigme/言語/english/admin.php
+define('_MD_CODESVN', 'コードリポジトリ');
+
+新しいファイル:
+/言語/english/stopwords.php
+/言語/english/xmf.php
+
+更新 XoopsMailerLocal クラスの例:
+htdocs/ language/english/xoopsmailerlocal.php
+
+===============================
+2014/06/14: バージョン 2.5.7 最終版
+===============================
+追加/削除された定義
+
+/インストール/言語/english/install.php
+- define('WRITTEN_LICENSE',"書かれた XOOPS %s ライセンス キー: <strong>%s</strong>"); を追加しました。
+
+===============================
+2014/03/18: バージョン 2.5.7 RC1
+===============================
+追加/削除された定義
+
+/モジュール/システム/言語/english/admin.php
+- define('_AM_SYSTEM_USAGE',"使用法"); を追加しました。
+- define('_AM_SYSTEM_ACTIVE',"Active"); を追加しました。
+
+
+===============================
+2012/04/15: バージョン 2.5.5
+===============================
+追加/削除された定義
+
+/Frameworks/moduleclasses/moduleadmin/ language/english/main.php
+- define("_AM_MODULEADMIN_HOME", "Home"); を追加しました。
+- 追加define("_AM_MODULEADMIN_DASHBOARD", "ダッシュボード");
+- 追加define("_AM_MODULEADMIN_ABOUT", "About");
+- define("_AM_MODULEADMIN_PERMISSIONS", "Permissions"); を追加しました。
+- 定義を追加しました("_AM_MODULEADMIN_ABOUT_RELEASEDATE","リリース済み: ");
+- define("_AM_MODULEADMIN_ABOUT_AUTHOR","Author: "); を追加しました。
+- 追加define("_AM_MODULEADMIN_ABOUT_CREDITS","クレジット: ");
+- define("_AM_MODULEADMIN_ABOUT_LICENSE","ライセンス: "); を追加しました。
+- 追加define("_AM_MODULEADMIN_ABOUT_AUTHOR_NAME","作者名: ");
+- define("_AM_MODULEADMIN_ABOUT_AUTHOR_INFO","著者情報"); を追加しました。
+- 追加define("_AM_MODULEADMIN_ADMIN_FOOTER", "<div class='center smallsmall italic Pad5'>このモジュールは、<a class='tooltip' rel='external' href='http://xoops.org/' title='Visit XOOPS Community'>XOOPS Community</a></div>");
+
+/言語/english/calendar.php
+- 追加define("_CAL_FORMAT","Y-m-d");
+
+/xoops_lib/modules/protector/ language/english/modinfo.php
+
+- 追加define($constpref."_ADMINHOME","Home");
+- 追加define($constpref."_ADMINABOUT","About");
+- 追加define($constpref.'_STOPFORUMSPAM_ACTION','フォーラムスパムの停止');
+- 追加define($constpref.'_STOPFORUMSPAM_ACTIONDSC','www.stopforumspam.comデータベースに登録されているスパマーに対してPOSTデータをチェックします。php CURL libが必要です。');
+
+
+/インストール/言語/english/install.php
+- 追加define( "FILTER_FUNCTIONS", "フィルター関数");
+
+/言語/english/global.php
+- 定義を追加しました('_DBDATESTRING', 'Y-m-d');
+- 追加define('_DBTIMESTRING', 'H:i:s');
+- 追加define('_DBTIMESTAMPSTRING', 'Y-m-d H:i:s');
+
+/言語/english/pmsg.php
+- define('_PM_READ', 'Already Read'); を追加しました。
+
+/モジュール/システム/言語/english/admin.php
+- define("_AM_SYSTEM_UNINSTALL","Uninstall"); を追加しました。
+
+関連項目:
+/modules/profile/docs/lang_diff.txt
+
+===============================
+2011/11/17: バージョン 2.5.4
+===============================
+
+/Frameworks/moduleclasses/moduleadmin/ language/english/main.php
+_AM_MODULEADMIN_CONFIG_DB
+_AM_MODULEADMIN_CONFIG_ADMIN
+
+===============================
+2011/10/10: バージョン 2.5.4 RC
+===============================
+
+新しいファイル:
+モジュール/pm/言語/english/help/help.html
+モジュール/プロファイル/言語/english/help/help.html
+モジュール/プロテクター/言語/english/help/help.html
+
+追加/削除された定義
+
+/言語/english/pmsg.php
+delete define('_PM_READ', '既読');
+
+/言語/english/user.php
+- 定義を追加しました('_US_SKYPE', 'Skype');
+- 定義を追加しました('_US_FACEBOOK', 'Facebook');
+
+/modules/pm/ language/english/main.php
+- 削除されたdefine("_PM_RECEIVE","RECEIVE");
+- 削除されたdefine("_PM_POST","POST");
+- 削除されたdefine("_PM_READBOX","READBOX");
+- 削除されたdefine("_PM_RSAVEBOX","Receive_SAVEBOX");
+- 削除されたdefine("_PM_SENTBOX","SENTBOX");
+- 削除されたdefine("_PM_PSAVEBOX","Post_SAVEBOX");
+- 削除されたdefine("_PM_SAVED","正常に保存されました");
+- 削除されたdefine("_PM_TOC","From: ");
+- 削除されたdefine("_PM_UID","送信者のID");
+
+/言語/english/findusers.php
+- 定義を追加しました('_MA_USER_FACEBOOK', 'Facebook Link'); //やるべきこと
+- 追加define('_MA_USER_SKYPE', 'Skype Link');//TO DO
+
+/modules/pm/ language/english/modinfo.php
+- 追加define("_PM_MI_ABOUT", "About");
+
+/モジュール/プロファイル/言語/english/admin.php
+- define('_PROFILE_AM_ACTION', 'Action'); を追加しました。
+
+/モジュール/プロファイル/言語/english/modinfo.php
+- define("_PROFILE_MI_ABOUT", "About"); を追加しました。
+- define("_PROFILE_MI_HOME", "Home"); を追加しました。
+
+
+/モジュール/システム/言語/english/admin/preferences.php
+- 削除されたdefine("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_GENERAL","一般設定");
+- 削除define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_USERSETTINGS","ユーザー情報設定");
+- 削除define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_METAFOOTER","メタタグとフッター");
+- 削除define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_CENSOR","Word Censoring Options");
+- 削除define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_SEARCH","検索オプション");
+- 削除define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_MAILER","電子メール設定");
+- 削除define("_AM_SYSTEM_PREFERENCES_NAV_MD_AM_AUTHENTICATION","認証オプション");*/
+- 削除されたdefine("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_GENERAL","フェア");
+- 削除define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_USERSETTINGS","A Faire");
+- 削除されたdefine("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_METAFOOTER","フェア");
+- 削除define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_CENSOR","A Faire");
+- 削除define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_SEARCH","A Faire");
+- 削除define("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_MAILER","フェア");
+- 削除されたdefine("_AM_SYSTEM_PREFERENCES_NAV_TIPS_MD_AM_AUTHENTICATION","フェア");
+- 削除されたdefine("_MD_AM_LOADINGIMG", "表示読み込み中...画像?");
+- 削除define("_MD_AM_CHNGUTHEME", "すべてのユーザーのテーマを変更");
+
+/モジュール/システム/言語/english/admin/users.php
+- 追加define("_AM_SYSTEM_USERS_ACCEPT_EMAIL","管理者からのメールを受け入れる");
+
+- 削除されたdefine("_AM_SYSTEM_USERS_NAV_MANAGER","ユーザーマネージャー");
+- 削除define("_AM_SYSTEM_USERS_USERPOST","ユーザー投稿");
+- 削除されたdefine("_AM_SYSTEM_USERS_STORIES","ストーリー");
+- 削除されたdefine("_AM_SYSTEM_USERS_COMMENTS","コメント");
+- 削除されましたdefine("_AM_SYSTEM_USERS_PTBBTSDIYT","上記のユーザー投稿情報が実際のステータスを示していないようだと思われる場合は、下のボタンを押してデータを同期してください");
+- 削除済みのdefine("_AM_SYSTEM_USERS_CNGTCOM","合計コメントを取得できませんでした");
+- 削除されたdefine("_AM_SYSTEM_USERS_CNGTST","総ストーリーを取得できませんでした");
+- 削除されたdefine("_AM_SYSTEM_USERS_LIST","List");
+- 削除define("_AM_SYSTEM_USERS_USERPOST","ユーザー投稿");
+- 削除されたdefine("_AM_SYSTEM_USERS_STORIES","ストーリー");
+- 削除されたdefine("_AM_SYSTEM_USERS_COMMENTS","コメント");
+- 削除されましたdefine("_AM_SYSTEM_USERS_PTBBTSDIYT","上記のユーザー投稿情報が実際のステータスを示していないと思われる場合は、下のボタンを押してデータを同期してください");
+- 削除されたdefine("_AM_SYSTEM_USERS_CNGTCOM","すべてのコメントを取得できませんでした");
+- 削除define("_AM_SYSTEM_USERS_CNGTST","すべてのストーリーを取得できませんでした");
+- 削除されたdefine("_AM_SYSTEM_USERS_LIST","List");
+
+xoops_lib/modules/プロテクター/言語/english/admin.php
+- 追加define("_AM_ADV_REGISTERGLOBALS2","そしてその中に以下の行を置きます:");
+
+変更されたファイル:
+
+/モジュール/システム/言語/english/admin/users.php (Mamba)/
+/言語/english/mail_template/activated.tpl
+/言語/english/mail_template/adminactivate.tpl
+/言語/english/mail_template/lostpass1.tpl
+/言語/english/mail_template/lostpass2.tpl
+/言語/english/mail_template/register.tpl
+/言語/english/mail_template/welcome.tpl
+/モジュール/システム/言語/english/admin/avatars.php
+/モジュール/システム/言語/english/admin/banners.php
+/モジュール/システム/言語/english/admin/blocksadmin.php
+/モジュール/システム/言語/english/admin/comments.php
+/モジュール/システム/言語/english/admin/preferences.php
+/モジュール/システム/言語/english/admin/userrank.php
+/モジュール/システム/言語/english/admin/users.php
+/modules/system/ language/english/help/mailusers.html
+/モジュール/システム/言語/english/help/preferences.html
+/モジュール/システム/言語/english/admin.php
+/モジュール/システム/言語/english/blocks.php
+/モジュール/システム/言語/english/modinfo.php
+/モジュール/システム/テーマ/デフォルト/言語/english/admin.php
+/モジュール/システム/テーマ/zetadigme/言語/english/admin.php
+/主題/suico/言語/english/main.php
+/主題/zetagenesis/言語/english/main.php
+
+
+===============================
+2011/10/05: バージョン 2.5.4 ベータ版
+===============================
+- いくつかの英語翻訳を更新しました (DCrussader/Mamba)
+- language/english/calendar.php _CAL_DEF_DATE_FORMAT を削除しました
+- language/english/calendar.php _CAL_TT_DATE_FORMAT を削除しました
+- 削除されたモジュール/システム/言語/english/admin/users.php _AM_SYSTEM_USERS_NAV_MANAGER
+- 削除された modules/system/ language/english/admin/preferences.php _MD_AM_LOADINGIMG
+- 削除された modules/system/ language/english/admin/preferences.php _MD_AM_CHNGUTHEME
+- 削除された modules/pm/ language/english/admin/main.php _PM_RECEIVE、_PM_POST、_PM_READBOX、_PM_RSAVEBOX、_PM_SENTBOX、_PM_PSAVEBOX、_PM_SAVED、_PM_TOC
+- /modules/profile/ language/english/admin.php _PROFILE_AM_ACTION を追加しました
+- /modules/profile/ language/english/main.php _PROFILE_MI_ABOUT を追加しました
+- /modules/profile/ language/english/main.php _PROFILE_MI_HOME を追加しました
+- /modules/pm/ language/english/modinfo.php _PM_MI_ABOUT を追加しました
+- modules/system/ language/english/admin/users.php _AM_SYSTEM_USERS_FACEBOOK、_AM_SYSTEM_USERS_SKYPE を追加しました
+- language/english/user.php _US_SKYPE、_US_FACEBOOK を追加
+
+xoops_lib/modules/プロテクター/言語/english/modinfo.php
+- 追加define($constpref.'_STOPFORUMSPAM_ACTION','フォーラムスパムの停止');
+- 追加define($constpref.'_STOPFORUMSPAM_ACTIONDSC','www.stopforumspam.comデータベースに登録されているスパマーに対してPOSTデータをチェックします。php CURL libが必要です。');
+
+
+
+===============================
+2011/09/06: バージョン 2.5.2 RC
+===============================
+ - language/english/misc.php _MSC_CLICK_TO_OPEN_IMAGE、_MSC_RESIZED_IMAGE、_MSC_ORIGINAL_IMAGE を追加しました
+ - language/english/pmsg.php _PM_SURE_TO_DELETE、_PM_READ を追加しました
+ - modules/pm/ language/english/admin/main.php _PM_READ、_PM_SUBJECT_ICONS を追加しました
+ - modules\system/ language/english/admin/tplsets.php _AM_SYSTEM_TEMPLATES_SET
+ - modules/system/主題/default/ language/english/admin/admin.php _OXYGEN_XOOPSENGINE を削除しました
+ - modules/system/ language/english/admin/blocksadmin.php _AM_SYSTEM_BLOCKS_SAVE を削除しました
+ - language/english/calendar.php _CAL_DEF_DATE_FORMAT を追加しました
+ - language/english/calendar.php _CAL_TT_DATE_FORMAT を追加しました
+
+===============================
+2011/03/15: バージョン 2.5.1 RC
+===============================
+
+言語定数を追加しました:
+  モジュール/システム/言語/english/admin/images.php _AM_SYSTEM_IMAGES_URL
+  モジュール/システム/テーマ/デフォルト/言語/english/admin/admin.php _OXYGEN_XOOPSENGINE
+
+変更された言語定数:
+  モジュール/システム/テーマ/デフォルト/言語/english/admin/admin.php _OXYGEN_ABOUT_TEXT、_OXYGEN_WEBSITE
+  モジュール/システム/言語/english/helper/help_center.html、modulesadmin.html
+
+削除された言語定数:
+  モジュール/システム/テーマ/デフォルト/言語/english/admin/admin.php _OXYGEN_XGIFTSHOP、_OXYGEN_XDONATIONS、_OXYGEN_XDONATIONS_TEXT、_OXYGEN_KEY、_OXYGEN_LICENSE、_OXYGEN_SOURCEFORGE_TEXT、_OXYGEN_POWERED_BY
+  モジュール/システム/テーマ/デフォルト/言語/english/admin/admin.php _OXYGEN_XGIFTSHOP、_OXYGEN_XDONATIONS、_OXYGEN_XDONATIONS_TEXT、_OXYGEN_KEY、_OXYGEN_LICENSE、_OXYGEN_SOURCEFORGE_TEXT、_OXYGEN_POWERED_BY
