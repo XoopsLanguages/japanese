@@ -1,0 +1,62 @@
+<div id="help-template" class="outer">
+    <h1 class="head">ヘルプ: <a class="ui-corner-all tooltip" href="<{$xoops_url}>/modules/profile/admin/index.php" title="プロフィール管理に戻る"> プロフィール <img src="<{xoAdminIcons 'home.png'}>" alt="プロフィール管理に戻る"/></a></h1>
+    <!-- -----ヘルプ内容 ---------- -->
+    <h4 class="odd">説明</h4>
+
+    <p class="even">プロフィールモジュールは、カスタムユーザープロフィールフィールドを管理するためのものです。</p>
+    <h4 class="odd">インストール/アンインストール</h4>
+
+    <p>特別な手順は必要ありません。標準のインストール手順に従ってください。/profileフォルダを../modulesディレクトリに展開します。管理者 -> システムモジュール -> モジュールからモジュールをインストールします。</p>
+
+    <p>モジュールのインストールに関する詳細な手順は、<a href="https://www.gitbook.com/book/xoops/xoops-operations-guide/" target="_blank" title="XOOPS運用マニュアル">XOOPS運用マニュアル</a> に記載されています。<br><br></p>
+    <h4 class="odd">操作手順</h4>
+
+    <p class="even">このモジュールをセットアップするには、以下を行う必要があります：</p>
+    <ul>
+        <li>モジュールの設定（「設定」を参照）を行い、必要に応じてプロフィールブロックを使用する場合はその設定を行います（「ブロック」を参照）。</li>
+        <li>既存のカテゴリを編集するか、新しいカテゴリを追加します。</li>
+        <li>既存のフィールドを編集するか、新しいフィールドを追加します。ここでは、どのフィールドがどのカテゴリに表示されるか、ユーザー登録時に表示されるかを指定できます。</li>
+        <li>登録ステップの順序を定義します。</li>
+        <li>最後に、個々のフィールドに対して権限を設定できます。どのフィールドが編集可能か、検索可能かを指定します。<br><br></li>
+    </ul>
+    <h4 class="odd">スパム対策</h4>
+
+    <p class="even">スパム登録を最小限に抑えるために、以下を行ってください：</p>
+
+    <ul>
+        <li>管理者でプロテクターモジュールに移動し、設定に進み、以下のオプションを確認します：
+
+            「Stop Forum Spam」
+            www.stopforumspam.comのデータベースに登録されているスパマーに対してPOSTデータをチェックします。<br>
+            これを「IPを禁止（制限なし）」に設定します。
+        </li>
+        <br>
+
+        <li>/class/captcha/config.php で、モードが「text」に設定されていることを確認してください：<br><br>
+
+            <span style="font-style: italic;">     return $config = array(<br>
+    'disabled' => false, // CAPTCHAを無効にする<br>
+    'mode' => 'text', // デフォルトモード。'text'、'image'、'recaptcha'（APIキー必要）から選択可能<br>
+    'name' => 'xoopscaptcha', // CAPTCHA名<br>
+    'skipmember' => true, // メンバーに対してCAPTCHAチェックをスキップ<br>
+    'maxattempts' => 10, // セッションごとの最大試行回数<br>
+    );</span></li>
+        <br>
+
+        <li>プロフィールモジュールで、管理者に移動し、以下の基本ステップで：<br>
+
+            /modules/profile/admin/step.php?id=1<br>
+
+            「ステップ後の保存」を「いいえ」に設定します。
+        </li>
+        <br><br>
+
+        <li>プロフィール設定で、「2番目の登録ステップ後にCAPTCHAを使用する」オプションを「はい」に設定します（デフォルト設定）。</li>
+        <br>
+        <ul>
+
+            <h4 class="odd">チュートリアル</h4>
+
+            <p class="even">チュートリアルは近日公開予定です。<br></p>
+            <!-- -----ヘルプ内容 ---------- -->
+</div>
